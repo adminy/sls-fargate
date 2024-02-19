@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`full service task configuration 1`] = `
+Object {
+  "architecture": "X86_64",
+  "cloudFormationResource": Object {
+    "additionalContainers": Array [
+      Object {
+        "Image": "global-additional-container-image",
+        "Name": "global-additional-container-name",
+      },
+    ],
+    "container": Object {
+      "StopTimeout": 5,
+    },
+    "service": Object {
+      "EnableECSManagedTags": "true",
+    },
+    "task": Object {
+      "EphemeralStorage": 5,
+    },
+  },
+  "clusterName": "my-cluster-name",
+  "containerInsights": true,
+  "cpu": 512,
+  "environment": Object {
+    "global": "variable",
+  },
+  "executionRoleArn": "arn:aws:iam::123456:role/my-custom-execution-role",
+  "iamManagedPolicies": Array [
+    "arn:aws:iam::aws:policy/my-managed-policy",
+  ],
+  "iamRoleStatements": Array [
+    Object {
+      "Action": Array [
+        "resource:*",
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+    },
+  ],
+  "logGroupName": "my-log-group",
+  "logRetentionInDays": 356,
+  "memory": "1GB",
+  "tags": Object {
+    "global": "tag",
+  },
+  "taskRoleArn": "arn:aws:iam::123456:role/my-custom-task-role",
+  "tasks": Array [
+    Object {
+      "architecture": "ARM64",
+      "cloudFormationResource": Object {
+        "additionalContainers": Array [
+          Object {
+            "Image": "global-additional-container-image",
+            "Name": "global-additional-container-name",
+          },
+          Object {
+            "Image": "task-additional-container-image",
+            "Name": "task-additional-container-name",
+          },
+        ],
+        "container": Object {
+          "StartTimeout": 5,
+          "StopTimeout": 5,
+        },
+        "service": Object {
+          "EnableECSManagedTags": "true",
+          "LoadBalancers": Object {
+            "ContainerName": "container-name",
+            "ContainerPort": 8080,
+            "TargetGroupArn": "target-group-arn",
+          },
+        },
+        "task": Object {
+          "EphemeralStorage": 5,
+          "Family": "task-family",
+        },
+      },
+      "command": Array [
+        "command",
+      ],
+      "cpu": 1024,
+      "dependsOn": Array [
+        "MySampleResource",
+      ],
+      "entryPoint": Array [
+        "entrypoint",
+      ],
+      "environment": Object {
+        "global": "variable",
+        "task": "variable",
+      },
+      "executionRoleArn": "arn:aws:iam::123456:role/my-custom-execution-role-for-task-1",
+      "image": "my-image-1",
+      "memory": "2GB",
+      "name": "my-task-1",
+      "portMappings": Array [
+        Object {
+          "containerPort": 5349,
+          "hostPort": 5349,
+          "protocol": "tcp",
+        },
+        Object {
+          "containerPortRange": "10000-20000",
+          "protocol": "udp",
+        },
+      ],
+      "service": Object {
+        "desiredCount": 2,
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 0,
+        "spot": true,
+      },
+      "tags": Object {
+        "global": "tag",
+        "task": "tag",
+      },
+      "taskRoleArn": "arn:aws:iam::123456:role/my-custom-task-role-for-task-1",
+      "vpc": Object {
+        "assignPublicIp": true,
+        "securityGroupIds": Array [
+          "sg-5678",
+        ],
+        "subnetIds": Array [
+          "subnet-5678",
+        ],
+      },
+    },
+    Object {
+      "architecture": "X86_64",
+      "cloudFormationResource": Object {
+        "additionalContainers": Array [
+          Object {
+            "Image": "global-additional-container-image",
+            "Name": "global-additional-container-name",
+          },
+        ],
+        "container": Object {
+          "StopTimeout": 5,
+        },
+        "service": Object {
+          "EnableECSManagedTags": "true",
+        },
+        "task": Object {
+          "EphemeralStorage": 5,
+        },
+      },
+      "command": Array [],
+      "cpu": 512,
+      "dependsOn": undefined,
+      "entryPoint": Array [],
+      "environment": Object {
+        "global": "variable",
+      },
+      "executionRoleArn": "arn:aws:iam::123456:role/my-custom-execution-role",
+      "image": "my-image-2",
+      "memory": "1GB",
+      "name": "task-2",
+      "portMappings": Array [],
+      "service": Object {
+        "desiredCount": 1,
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 100,
+        "spot": false,
+      },
+      "tags": Object {
+        "global": "tag",
+      },
+      "taskRoleArn": "arn:aws:iam::123456:role/my-custom-task-role",
+      "vpc": Object {
+        "assignPublicIp": false,
+        "securityGroupIds": Array [
+          "sg-1234",
+        ],
+        "subnetIds": Array [
+          "subnet-1234",
+        ],
+      },
+    },
+  ],
+  "vpc": Object {
+    "assignPublicIp": false,
+    "securityGroupIds": Array [
+      "sg-1234",
+    ],
+    "subnetIds": Array [
+      "subnet-1234",
+    ],
+  },
+}
+`;
+
+exports[`minimal scheduled task configuration 1`] = `
+Object {
+  "architecture": undefined,
+  "cloudFormationResource": Object {
+    "additionalContainers": Array [],
+    "container": Object {},
+    "service": Object {},
+    "task": Object {},
+  },
+  "clusterName": undefined,
+  "containerInsights": undefined,
+  "cpu": 256,
+  "environment": Object {},
+  "executionRoleArn": undefined,
+  "iamManagedPolicies": Array [],
+  "iamRoleStatements": Array [],
+  "logGroupName": undefined,
+  "logRetentionInDays": undefined,
+  "memory": "0.5GB",
+  "tags": Object {},
+  "taskRoleArn": undefined,
+  "tasks": Array [
+    Object {
+      "architecture": undefined,
+      "cloudFormationResource": Object {
+        "additionalContainers": Array [],
+        "container": Object {},
+        "service": Object {},
+        "task": Object {},
+      },
+      "command": Array [],
+      "cpu": 256,
+      "dependsOn": undefined,
+      "entryPoint": Array [],
+      "environment": Object {},
+      "executionRoleArn": undefined,
+      "image": "my-image",
+      "memory": "0.5GB",
+      "name": "my-task",
+      "portMappings": Array [],
+      "schedule": "rate(1 minute)",
+      "tags": Object {},
+      "taskRoleArn": undefined,
+      "vpc": Object {
+        "assignPublicIp": false,
+        "securityGroupIds": Array [
+          "sg-1234",
+        ],
+        "subnetIds": Array [
+          "subnet-1234",
+        ],
+      },
+    },
+  ],
+  "vpc": Object {
+    "assignPublicIp": false,
+    "securityGroupIds": Array [
+      "sg-1234",
+    ],
+    "subnetIds": Array [
+      "subnet-1234",
+    ],
+  },
+}
+`;
+
+exports[`minimal service task configuration 1`] = `
+Object {
+  "architecture": undefined,
+  "cloudFormationResource": Object {
+    "additionalContainers": Array [],
+    "container": Object {},
+    "service": Object {},
+    "task": Object {},
+  },
+  "clusterName": undefined,
+  "containerInsights": undefined,
+  "cpu": 256,
+  "environment": Object {},
+  "executionRoleArn": undefined,
+  "iamManagedPolicies": Array [],
+  "iamRoleStatements": Array [],
+  "logGroupName": undefined,
+  "logRetentionInDays": undefined,
+  "memory": "0.5GB",
+  "tags": Object {},
+  "taskRoleArn": undefined,
+  "tasks": Array [
+    Object {
+      "architecture": undefined,
+      "cloudFormationResource": Object {
+        "additionalContainers": Array [],
+        "container": Object {},
+        "service": Object {},
+        "task": Object {},
+      },
+      "command": Array [],
+      "cpu": 256,
+      "dependsOn": undefined,
+      "entryPoint": Array [],
+      "environment": Object {},
+      "executionRoleArn": undefined,
+      "image": "my-image",
+      "memory": "0.5GB",
+      "name": "my-task",
+      "portMappings": Array [],
+      "service": Object {
+        "desiredCount": 1,
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 100,
+        "spot": false,
+      },
+      "tags": Object {},
+      "taskRoleArn": undefined,
+      "vpc": Object {
+        "assignPublicIp": false,
+        "securityGroupIds": Array [
+          "sg-1234",
+        ],
+        "subnetIds": Array [
+          "subnet-1234",
+        ],
+      },
+    },
+  ],
+  "vpc": Object {
+    "assignPublicIp": false,
+    "securityGroupIds": Array [
+      "sg-1234",
+    ],
+    "subnetIds": Array [
+      "subnet-1234",
+    ],
+  },
+}
+`;

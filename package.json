@@ -1,0 +1,36 @@
+{
+  "name": "sls-fargate",
+  "version": "0.0.1",
+  "description": "Maintain long-running Fargate ECS tasks within your Serverless project",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "serverless": "3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "src/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adminy/sls-fargate.git"
+  },
+  "keywords": [
+    "serverless",
+    "fargate",
+    "aws",
+    "ecr"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adminy/sls-fargate/issues"
+  },
+  "homepage": "https://github.com/adminy/sls-fargate#readme"
+}
