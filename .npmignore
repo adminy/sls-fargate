@@ -1,0 +1,7 @@
+node_modules
+.github
+example
+Makefile
+.gitignore
+.vscode
+
